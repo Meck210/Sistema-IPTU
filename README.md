@@ -21,4 +21,4 @@ Este projeto está sendo desenvolvido como parte do meu aprendizado em Java.
 
 1. **Clone o repositório:**
    ```bash
-   git clone <URL_DO_REPOSITORIO>
+   git clone https://github.com/Meck210/Sistema-IPTU.git
