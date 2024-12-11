@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Sistema-IPTU.iml" filepath="$PROJECT_DIR$/.idea/Sistema-IPTU.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DEV.iml" filepath="$PROJECT_DIR$/DEV.iml" />
     </modules>
   </component>
 </project>
