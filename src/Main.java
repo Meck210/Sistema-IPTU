@@ -1,25 +1,47 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    private static Scanner sc;
+
     public static void main(String[] args) {
+        ArrayList<Double> valores = new ArrayList<>();
 
-        Cadastro titular = new Cadastro();
-        titular.nome = "Matheus";
-        titular.cep = 49030210;
-        titular.endereco = "Av maria pastora";
-        Conta conta = new Conta();
-        conta.setNumberIptu(10_203_108_912L);
-        conta.setValoresIptu(10.000);
-        conta.setValoresIptu(1.200);
-        conta.setValoresIptu(500.00);
+        int opc = 0;
 
-
-        System.out.println("titular: " + titular.nome + "\ncep do titular: " + titular.cep);
-        System.out.println("Endereço titular: " + titular.endereco);
-        System.out.println("Numero do iptu: " + conta.getNumberIptu());
-        System.out.println("Valores do Iptu: ");
-        conta.exibirValores();
-
+        while (opc != 3) {
+            System.out.println("--------------SISTEMA DE IPTU---------------");
+            System.out.println("-----------Digite a Opcao do Sistema IPTU--------------");
+            System.out.println("Digite a opcao: ");
+            System.out.println("1 - Fazer Cadastro");
+            System.out.println("2 -Ver iptus ");
+            System.out.println("3 -Sair");
+            opc = sc.nextInt();
+            switch (opc) {
+                case 1:
+                    cadastroUser();
+                    break;
+                case 2:
+                    verIPTU();
+                    break;
+                case 3:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("OPCAO INVALIDA");
+            }
+        }
+    }
+    public static void cadastroUser() {
+        System.out.println("Digite o NOME do usuario: ");
+        String nome = sc.nextLine();
+        System.out.println("Digite o CEP: ");
+        int cep = sc.nextLine();
+        System.out.println("Digite o ENDEREÇO: ");
+        String endereco = sc.nextLine();
+        System.out.println("Digite o NUMERO DO ENDEREÇO: ");
 
     }
 }

@@ -1,30 +1,41 @@
 import java.util.ArrayList;
 
 public class Conta {
-    Cadastro titular;
-    Long numberIptu;
-    ArrayList<Double> valoresIptu = new ArrayList<Double>();
+    private Cadastro titular;
+    private Long numberIptu;
+    private ArrayList<Double> valoresIptu;
 
 
-
-    void setNumberIptu(Long numberIptu) {
+    public Conta(Long numberIptu, ArrayList<Double> valoresIptu) {
         this.numberIptu = numberIptu;
+        this.valoresIptu = valoresIptu;
     }
 
-    void setValoresIptu(Double valoresIptu){
-        this.valoresIptu.add(valoresIptu);
+
+    public Cadastro getTitular() {
+        return titular;
     }
 
-    void exibirValores(){
-        for (double valorIptu : valoresIptu){
-            System.out.println(valorIptu);
+    public void setTitular(Cadastro titular) {
+        this.titular = titular;
+    }
+
+    public Long getNumberIPTU() {
+        return numberIptu;
+    }
+
+    public void setNumberIPTU(Long numberIPTU) {
+        this.numberIptu = numberIPTU;
+    }
+
+    public void exibirValor() {
+        for (Double valor : valoresIptu) {
+            System.out.println(valor);
         }
     }
 
-    Long getNumberIptu() {
-        return this.numberIptu;
+
+    public void setTitular(String nome, int cep) {
+
     }
-
-
-
 }
