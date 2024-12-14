@@ -1,33 +1,16 @@
-public class Cadastro { private int id;
-   private String nome;
+public class Cadastro extends Pessoa {
    private int cep;
    private String endereco;
    private int numberEndereco;
 
 
-   public Cadastro(String nome, int cep, String endereco, int numberEndereco) {
-       this.id = id;
-       this.nome = nome;
+
+   public Cadastro(String nome, int idade, int cep, String email, String endereco, int numberEndereco) {
+       super(nome, idade, email);
        this.cep = cep;
        this.endereco = endereco;
        this.numberEndereco = numberEndereco;
    }
-
-   public int getId() {
-       return id;
-   }
-
-   public void setId(int id) {
-       this.id = id;
-   }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 
     public int getCep() {
         return cep;
@@ -52,4 +35,6 @@ public class Cadastro { private int id;
     public void setNumberEndereco(int numberEndereco) {
         this.numberEndereco = numberEndereco;
     }
+
+
 }
