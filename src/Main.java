@@ -5,10 +5,10 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     private static Scanner sc = new Scanner(System.in);
-    private static PersonDbUser dbUser = new PersonDbUser();
+    private static DbUser dbUser = new PersonDbUser();
 
     public static void main(String[] args) {
-
+        mockCadastro();
 
         int opc;
 
@@ -32,7 +32,7 @@ public class Main {
                 case 3:
                     break;
                 case 4:
-                    System.exit(0);
+                    return;
                 default:
                     System.out.println("OPCAO INVALIDA");
             }
@@ -59,5 +59,9 @@ public class Main {
         Cadastro novoCadastro = new Cadastro(nome, idade, cep, email, endereco, numberEndereco);
         dbUser.addCadastro(novoCadastro);
         System.out.println("Cadastro realizo");
+    }
+
+    public static void mockCadastro() {
+        dbUser.addCadastro(new Cadastro("claudia", 49, 49030210,"claudiaregi1200@gmail.com", "av maria pastora", 260));
     }
 }

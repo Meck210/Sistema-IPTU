@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonDbUser {
+public class PersonDbUser implements DbUser{
     private List<Cadastro> cadastros = new ArrayList<>();
 
     public void addCadastro(Cadastro cadastro) {
@@ -19,5 +19,10 @@ public class PersonDbUser {
                 System.out.println("Endereço: " + cadastro.getEndereco() + " Numero: " + cadastro.getNumberEndereco());
             }
         }
+    }
+
+    @Override
+    public List<Cadastro> getCadastros() {
+        return cadastros;
     }
 }
