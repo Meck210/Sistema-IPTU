@@ -9,9 +9,11 @@ public class PersonDbUser implements DbUser{
     }
 
     public void exibirCadastro() {
+
         if (cadastros.isEmpty()) {
-            System.out.println("cadastro nao encontrado!!");
-        } else {
+                System.out.println("cadastro nao encontrado!!");
+        }
+        else{
             for (Cadastro cadastro : cadastros) {
                 System.out.println("Nome: " + cadastro.getNome());
                 System.out.println("Idade: " + cadastro.getIdade());
