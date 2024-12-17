@@ -1,26 +1,26 @@
-import java.security.PublicKey;
-
 public class Imovel{
     private int id;
     private double areaImovel;
     private double valorVenal;
+    private double aliquota;
     private Cadastro proprietario;
 
 
-    public Imovel (int id, double areaImovel, double valorVenal) {
+    public Imovel (int id, double areaImovel, double valorVenal, double aliquota) {
         this.id = id;
         this.areaImovel = areaImovel;
         this.valorVenal = valorVenal;
+        this.aliquota = aliquota;
     }
 
 
-    public void calcularIPTU() {
-
-
+    public double getAliquota() {
+        return aliquota;
     }
 
-
-
+    public void setAliquota(double aliquota) {
+        this.aliquota = aliquota;
+    }
 
     public int getId() {
         return id;
@@ -52,5 +52,21 @@ public class Imovel{
 
     public void setProprietario(Cadastro proprietario) {
         this.proprietario = proprietario;
+    }
+
+    public double calcularIPTU() {
+        return (areaImovel * valorVenal) / aliquota / 100;
+    }
+
+    @Override
+    public String
+    toString() {
+        return "Imovel{" +
+                "id=" + id +
+                ", areaImovel=" + areaImovel +
+                ", valorVenal=" + valorVenal +
+                ", aliquota=" + aliquota +
+                ", proprietario=" + proprietario +
+                '}';
     }
 }
